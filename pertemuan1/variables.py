@@ -1,22 +1,33 @@
 #membuat variabel
+'''
 a = 7
 b = "Olivia"
 print(a)
 print(b)
+'''
+'''
+x = 25      # x adalah int
+x = "Ayam Goreng" # x sekarang adalah string
+print(x)
+'''
 
 #Casting
 '''
 menentukan atau mengganti tipe data variabel
 '''
+'''
 a = str(7)    #a akan jadi '7'
 b = int(9)    #b akan jadi 9
 c = float(5)  #c akan jadi 5.0
+'''
 
 #melihat tipe data
+'''
 a = 7
 b = "Olivia"
 print(type(a))
 print(type(b))
+'''
 
 #Single or Double Quotes / tanda kutip tunggal atau ganda
 a = "Olivia"
@@ -25,10 +36,12 @@ a = 'Olivia'
 
 #Case-Sensitive
 #peka terhdap huruf besar dan kecil
+'''
 b = 9
 B = "Pia" 
 print(b)
 print(B)
+'''
 #b dan B adalah variabel yang berbeda
 
 
@@ -62,48 +75,72 @@ nilai_satu = "World"
 
 #Assign Multiple Values
 #Banyak Nilai untuk Banyak Variabel
+'''
 a, b, c = "Ayam", "Bebek", "Kambing"
 print(a)
 print(b)
 print(c)
+'''
 
 #Satu Nilai untuk Beberapa Variabel
+'''
 x = y = z = "Pisang Goreng"
 print(x)
 print(y)
 print(z)
+'''
 
+'''Jika Anda memiliki kumpulan nilai dalam sebuah array list, 
+tuplePython memungkinkan Anda untuk mengekstrak nilai-nilai tersebut ke dalam variabel.
+ Proses ini disebut membongkar (unpacking ).
+'''
+'''
+binatang = ["ayam", "sapi", "kucing"]
+x, y, z = binatang
+print(x)
+print(y)
+print(z)
+'''
 
 #Output Variables
 #print digunakan untuk mencetak nilai variabel
+'''
 x = "Python mantap"
 print(x)
+'''
 
 #di dalam print menampilkan beberapa variabel, dipisahkan oleh koma
+'''
 x = "Ayam"
 y = "goreng"
 z = "enak"
 print(x, y, z)
+'''
 
 #dapat menggunakan + operator untuk menampilkan beberapa variabel
+'''
 x = "Ayam"
 y = "goreng"
 z = "enak"
 print(x +y + z)
+'''
 
 #untuk angka, + karakter berfungsi sebagai operator matematika
+'''
 b= 7
 c = 6
 print(b + c)
+'''
 
 '''
 untuk menampilkan beberapa variabel dalam print 
 adalah dengan memisahkannya dengan koma
 '''
+'''
 x = 10
 y = "Yoyo"
 print(x, y)
-
+'''
 
 #Global Variables
 #variabel yang dibuat di luar fungsi, dapat diakses didalam maupun diluar fungsi
@@ -116,7 +153,9 @@ myfunc()
 
 '''
 jika membuat variabel dengan nama yang sama didalam fungsi,
-variabel didalam fungsi akan menjadi variabel lokal
+variabel didalam fungsi akan menjadi variabel lokal'''
+
+
 '''
 #variable global dengan nama yang sama akan tetap seperti semula
 #global dan dengan nilai aslinya
@@ -144,3 +183,4 @@ def myfunc():
 myfunc()
 
 print("Python is " + x)
+'''

@@ -2,6 +2,7 @@
 print("Alloo guyss")
 print('Alloo guyss')
 
+
 #kutipan dalam kutipan
 print("Aman Aja")
 print("Aku dipanggil 'Olip'")
@@ -100,11 +101,6 @@ a = "Halo,Pia,Aku,Olivia"
 print(a.split(","))   #memisahkan string di setiap koma
 
 
-#Concatenate Strings / menggabungkan string
-a = "Halo"
-b = "Pia"
-c = a + b
-print(c)    
 
 #untuk menambahkan space di antara dua string, gunakan " "
 a = "Halo"

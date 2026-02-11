@@ -3,6 +3,8 @@
 membuat program pertama di python
 """
 print ("Halo, Pia!")
+print ("Selamat belajar Python!")
+print ("Python itu menyenangkan!")
 #penjumlahan sederhana
 print (1+2)
 print ('Hello, World!') #mengucapkan hello world
