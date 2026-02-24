@@ -1,85 +1,67 @@
 #privat
-class Person:
-  def __init__(self, name, age):
-    self.name = name
-    self.__age = age # Private property
+class Orang:
+  def __init__(self, nama, umur):
+    self.nama = nama
+    self.__umur = umur # porperti privat
 
-p1 = Person("Emil", 25)
-print(p1.name)
-print(p1.__age) # This will cause an error
+p1 = Orang("Olivia Bakri", 20)
+print(p1.nama)
+print(p1.__umur) # ini akan menyebabkan error karena __umur adalah properti privat
+
 
 #mendapatkan privat dengan getter
-class Person:
-  def __init__(self, name, age):
-    self.name = name
-    self.__age = age
+class Orang:
+  def __init__(self, nama, umur):
+    self.nama = nama
+    self.__umur = umur
 
-  def get_age(self):
-    return self.__age
+  def get_umur(self):
+    return self.__umur
 
-p1 = Person("Tobias", 25)
-print(p1.get_age())
-class Person:
-  def __init__(self, name, age):
-    self.name = name
-    self.__age = age
+p1 = Orang("Olivia Bakri", 20)
+print(p1.get_umur())
 
-  def get_age(self):
-    return self.__age
-
-p1 = Person("Tobias", 25)
-print(p1.get_age())
 
 
 #set
-class Person:
-  def __init__(self, name, age):
-    self.name = name
-    self.__age = age
+class Orang:
+  def __init__(self, nama, umur):
+    self.nama = nama
+    self.__umur = umur
 
-  def get_age(self):
-    return self.__age
+  def get_umur(self):
+    return self.__umur
 
-  def set_age(self, age):
-    if age > 0:
-      self.__age = age
+  def set_umur(self, umur):
+    if umur > 0:
+      self.__umur = umur
     else:
-      print("Age must be positive")
+      print("Umur harus positif")
 
-p1 = Person("Tobias", 25)
-print(p1.get_age())
+p1 = Orang("Olivia Bakri", 20)
+print(p1.get_umur())
 
-p1.set_age(26)
-print(p1.get_age())
+p1.set_umur(26)
+print(p1.get_umur())  
+
 
 #protected
-class Person:
-  def __init__(self, name, salary):
-    self.name = name
-    self._salary = salary # Protected property
+class Orang:
+  def __init__(self, nama, gaji):
+    self.nama = nama
+    self._gaji = gaji # properti protected
 
-p1 = Person("Linus", 50000)
-print(p1.name)
-print(p1._salary) # Can access, but shouldn't
+p1 = Orang("Olivia Bakri", 50000)
+print(p1.nama)
+print(p1._gaji) # ini bisa diakses, tapi sebaiknya tidak diakses langsung karena ini adalah properti protected
 
-#metode pribadi
-class Calculator:
-  def __init__(self):
-    self.result = 0
+#name mangling
+class Orang:
+  def __init__(self, nama, umur):
+    self.nama = nama
+    self.__umur = umur
 
-  def __validate(self, num):
-    if not isinstance(num, (int, float)):
-      return False
-    return True
+p1 = Orang("Olivia Bakri", 20)
 
-  def add(self, num):
-    if self.__validate(num):
-      self.result += num
-    else:
-      print("Invalid number")
-
-calc = Calculator()
-calc.add(10)
-calc.add(5)
-print(calc.result)
-# calc.__validate(5) # This would cause an error
+# Name mangling memungkinkan kita untuk mengakses properti privat dengan cara yang tidak direkomendasikan
+print(p1._Orang__umur)  # tidak disarankan,

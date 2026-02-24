@@ -1,53 +1,112 @@
 #membuat parent class
-class Person:
-  def __init__(self, fname, lname):
-    self.firstname = fname
-    self.lastname = lname
+class Nama:
+    def __init__(self, depan, belakang):
+        self.nama_depan = depan
+        self.nama_belakang = belakang
+    def printnama(self):
+        print(self.nama_depan, self.nama_belakang)
 
-  def printname(self):
-    print(self.firstname, self.lastname)
+x = Nama("Olivia", "Bakri")
+x.printnama()
+x = Nama("Ghea", "Ananda")
+x.printnama()
 
-#Use the Person class to create an object, and then execute the printname method:
 
-x = Person("John", "Doe")
-x.printname()
 
 #membuat child class
-class Person:
-  def __init__(self, fname, lname):
-    self.firstname = fname
-    self.lastname = lname
+class Nama:
+    def __init__(self, depan, belakang):
+        self.nama_depan = depan
+        self.nama_belakang = belakang
+    def printnama(self):
+        print(self.nama_depan, self.nama_belakang)
 
-  def printname(self):
-    print(self.firstname, self.lastname)
 
-class Student(Person):
-  def __init__(self, fname, lname):
-    super().__init__(fname, lname)
+class Mahasiswa(Nama):
+  def __init__(self, depan, belakang):
+    super().__init__(depan, belakang)
 
-x = Student("Mike", "Olsen")
-x.printname()
+x = Mahasiswa("Olivia", "Bakri")
+x.printnama()
+
+#pakai pass
+class Mahasiswa(Nama):
+    pass
+
+
+#Add the __init__() Function
+class Nama:
+    def __init__(self, depan, belakang):
+        self.nama_depan = depan
+        self.nama_belakang = belakang
+
+    def printnama(self):
+        print(self.nama_depan, self.nama_belakang)
+
+
+class Mahasiswa(Nama):
+  def __init__(self, depan, belakang):
+    Nama.__init__(self,depan, belakang)
+
+x = Mahasiswa("Olivia", "Bakri")
+x.printnama()
+
+
+
+#Use the super() Function
+class Nama:
+    def __init__(self, depan, belakang):
+        self.nama_depan = depan
+        self.nama_belakang = belakang
+
+    def printnama(self):
+        print(self.nama_depan, self.nama_belakang)
+
+
+class Mahasiswa(Nama):
+  def __init__(self, depan, belakang):
+    super().__init__(depan, belakang)
+
+x = Mahasiswa("Olivia", "Bakri")
+x.printnama()
+
+
+#add properties
+class Nama:
+    def __init__(self, depan, belakang):
+        self.nama_depan = depan
+        self.nama_belakang = belakang
+
+    def printnama(self):
+        print(self.nama_depan, self.nama_belakang)
+
+
+class Mahasiswa(Nama):
+  def __init__(self, depan, belakang, tahun):
+    super().__init__(depan, belakang)
+    self.tahun_lulus = tahun
+
+x = Mahasiswa("Olivia", "Bakri", 2029)
+print(x.tahun_lulus)
+
 
 #add methods
-class Student(Person):
-  def __init__(self, fname, lname, year):
-    super().__init__(fname, lname)
-    self.graduationyear = year
+class Nama:
+    def __init__(self, depan, belakang):
+        self.nama_depan = depan
+        self.nama_belakang = belakang
 
-  def welcome(self):
-    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
-
-
-class Animal:
-  def __init__(self, name):
-    self.name = name
-
-    def Speak(self):
-      print(self.name)
+    def printnama(self):
+        print(self.nama_depan, self.nama_belakang)
 
 
-class Dog(Animal):
-  print(self.name)
-  
-d1 = Dog("Rex")
-d1.Speak()
+class Mahasiswa(Nama):
+  def __init__(self, depan, belakang, tahun):
+    super().__init__(depan, belakang)
+    self.tahun_lulus = tahun
+
+  def selamat(self):
+    print("Selamat yaa", self.nama_depan, self.nama_belakang, "atas kelulusannya di tahun ", self.tahun_lulus)
+
+x = Mahasiswa("Olivia", "Bakri", 2029)
+x.selamat()
